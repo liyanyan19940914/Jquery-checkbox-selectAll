@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox</title>
+    <style type="text/css">
+        .btn {
+            background-color: #55bbbb;
+            width: 100px;;
+            height: 30px;
+            line-height: 30px;
+            color:white;
+            font-size: 16px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        ul li{
+            line-height: 30px;
+            list-style: none;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#all').click(function () {
+                if(this.checked){
+                    $("#list :checkbox").attr("checked",true);
+                }
+                else{
+                    $("#list :checkbox").attr("checked",false);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<h1>checkbox selectAll</h1>
+<ul id="list">
+    <li><lable><input type="checkbox" value="1">Jquery</lable></li>
+    <li><lable><input type="checkbox" value="2">React</lable></li>
+    <li><lable><input type="checkbox" value="3">Redux</lable></li>
+    <li><lable><input type="checkbox" value="4">Nodejs</lable></li>
+    <li><lable><input type="checkbox" value="5">Express</lable></li>
+    <li><lable><input type="checkbox" value="6">Mongodb</lable></li>
+</ul>
+<input type="checkbox" id="all">
+<input type="button" value="全选" class="btn" id="selectAll">
+</body>
+</html>
