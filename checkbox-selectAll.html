@@ -6,7 +6,7 @@
     <style type="text/css">
         .btn {
             background-color: #55bbbb;
-            width: 100px;;
+            min-width: 100px;;
             height: 30px;
             line-height: 30px;
             color:white;
@@ -40,6 +40,14 @@
                 $("#list :checkbox,#all").each(function () {
                     $(this).attr("checked",!$(this).attr("checked"));
                 })
+            });
+            $('#getValue').click(function () {
+                var valueArr = [];
+                $("#list :checkbox[checked]").each(function () {
+                    valueArr.push($(this).val())
+                })
+                var value = valueArr.join(' ');
+                alert(value);
             })
         })
     </script>
@@ -58,5 +66,6 @@
 <input type="button" value="全选" class="btn" id="selectAll">
 <input type="button" value="全不选" class="btn" id="unSelect">
 <input type="button" value="反选" class="btn" id="reverse">
+<input type="button" value="获得所选的信息" class="btn" id="getValue">
 </body>
 </html>
