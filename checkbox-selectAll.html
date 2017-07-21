@@ -42,11 +42,11 @@
                 })
             });
             $('#getValue').click(function () {
-                var valueArr = [];
+                const valueArr = [];
                 $("#list :checkbox:checked").each(function () {
                     valueArr.push($(this).val())
                 })
-                var value = valueArr.join(' ');
+                const value = valueArr.join(' ');
                 alert(value);
             });
         })
