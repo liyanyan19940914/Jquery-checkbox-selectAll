@@ -35,6 +35,11 @@
             });
             $('#unSelect').click(function () {
                 $("#list :checkbox,#all").attr("checked",false);
+            });
+            $('#reverse').click(function () {
+                $("#list :checkbox,#all").each(function () {
+                    $(this).attr("checked",!$(this).attr("checked"));
+                })
             })
         })
     </script>
@@ -52,5 +57,6 @@
 <input type="checkbox" id="all">
 <input type="button" value="全选" class="btn" id="selectAll">
 <input type="button" value="全不选" class="btn" id="unSelect">
+<input type="button" value="反选" class="btn" id="reverse">
 </body>
 </html>
