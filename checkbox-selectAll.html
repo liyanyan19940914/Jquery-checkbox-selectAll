@@ -32,6 +32,9 @@
             });
             $('#selectAll').click(function () {
                 $("#list :checkbox,#all").attr("checked",true);
+            });
+            $('#unSelect').click(function () {
+                $("#list :checkbox,#all").attr("checked",false);
             })
         })
     </script>
@@ -48,5 +51,6 @@
 </ul>
 <input type="checkbox" id="all">
 <input type="button" value="全选" class="btn" id="selectAll">
+<input type="button" value="全不选" class="btn" id="unSelect">
 </body>
 </html>
