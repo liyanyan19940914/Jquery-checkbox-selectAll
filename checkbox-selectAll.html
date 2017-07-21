@@ -43,12 +43,12 @@
             });
             $('#getValue').click(function () {
                 var valueArr = [];
-                $("#list :checkbox[checked]").each(function () {
+                $("#list :checkbox:checked").each(function () {
                     valueArr.push($(this).val())
                 })
                 var value = valueArr.join(' ');
                 alert(value);
-            })
+            });
         })
     </script>
 </head>
