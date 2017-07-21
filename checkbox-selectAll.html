@@ -29,6 +29,9 @@
                 else{
                     $("#list :checkbox").attr("checked",false);
                 }
+            });
+            $('#selectAll').click(function () {
+                $("#list :checkbox,#all").attr("checked",true);
             })
         })
     </script>
